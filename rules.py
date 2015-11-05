@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#coding:utf-8
 __author__ = 'johnny'
 
 class Rule:
@@ -16,7 +18,7 @@ class HeadingRule(Rule):
     """
     type = 'heading'
     def condition(self, block):
-        return not '\n' in block and len(block) <= 70 and not block[-1] == ':'
+        return (not '\n' in block) and (len(block) <= 70) and (not block[-1] == ':')
 
 class TitleRule(HeadingRule):
     """
@@ -28,7 +30,7 @@ class TitleRule(HeadingRule):
     def condition(self, block):
         if not self.first: return False
         self.first = False
-        return HeadingRule.conditon(self, block)
+        return HeadingRule.condition(self, block)
 
 class ListItemRule(Rule):
     """
