@@ -9,3 +9,4 @@ class HTMLRenderer:
         return '<em>%s</em>' % match.group(1)
     def feed(self, data):
         print(data)
+    def
