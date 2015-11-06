@@ -5,7 +5,7 @@ import sys
 import re
 
 from project001.handlers import *
-from util import *
+from project001.util import *
 from project001.rules import *
 
 
